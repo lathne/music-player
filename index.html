@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/0fa360d601.js" crossorigin="anonymous"></script>
-    <script defer src="https://use.fontawesome.com/releases/v5.0.3/js/all/js"></script>
 </head>
 <body>
     
@@ -16,9 +15,11 @@
             Audio not supported
     </audio>
 
+    <span id="currentlyPlayingSong"></span><em><span id="currentSong"></span></em>
+
     <div id="controls">
-        <i class="far fa-play-circle fa-5x"></i>
-        <i class="far fa-pause-circle fa-5x"></i>
+        <i class="far fa-play-circle fa-5x" onclick="playAudio()"></i>
+        <i class="far fa-pause-circle fa-5x" onclick="pauseAudio()"></i>
         <p>Volume:</p>
         <i class="fas fa-volume-down"></i>
         <input type="range" id="volumeSlider" min="0" max="1" step="0.01">

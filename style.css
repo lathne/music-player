@@ -1,0 +1,43 @@
+body {
+    font-family: 'Acme', sans-serif;
+    font-size: 30px;
+    background: radial-gradient(#9696e4, #4545ee);
+    font-size: 1.2em;
+    width: 50%;
+    margin: 20px auto;
+    padding: 20px;
+    text-align: center;
+    min-height: 50vh; /* this will make sure the content is the minimum of 50% of the viewport height. Viewport is the visible area of the screen*/
+}
+
+
+
+#songList {
+    background: lightcyan;
+    border-radius: 10px;
+    margin: 20px auto;
+    padding: 1.5em;
+    text-align: left;
+    max-width: 50%;
+}
+
+li {
+    padding: 15px;
+}
+
+li:hover, svg:hover { /* the svg stands for scalable vector graphics, the image type used for the icons*/
+    cursor: pointer;
+}
+
+#controls {
+    border: 1px lightgray solid;
+    border-radius: 10px;
+    background: lightcyan;
+    padding: 1.5em;
+    margin: 20px auto;
+    max-width: 50%;
+}
+
+svg {
+    color: lightslategray;
+}

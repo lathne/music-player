@@ -21,12 +21,14 @@ const createSongList = () => {
 
 document.getElementById('songList').appendChild(createSongList())
 
+//playing songs when clicked 
 songList.onclick = (e) => {
-    const clickedItem = e.target //each time a list item is clicked on let's call it a clicledItem
+    const clickedItem = e.target //each time a list item is clicked on let's call it a clickedItem
     const source = document.getElementById('source')
     source.src = 'songs/' + clickedItem.innerText
     console.log(clickedItem.innerText)
 
+//displaying currently playing song
     document.getElementById('currentlyPlayingSong').innerText = "Currently Playing: "
     document.getElementById('currentSong').innerText = clickedItem.innerText
 
@@ -34,6 +36,7 @@ songList.onclick = (e) => {
     player.play()
 }
 
+//play and pause controls
 const playAudio = () => {
     if(player.readyState) {
         player.play()
@@ -42,4 +45,20 @@ const playAudio = () => {
 
 const pauseAudio = () => {
     player.pause()
+}
+
+//volume slider
+const slider = document.getElementById('volumeSlider')
+slider.oninput = (e) => {
+    const volume = e.target.value
+    player.volume = volume
+}
+
+//progress bar 
+const updateProgress = () => {
+    //if statement because there was an "Uncaught type error" on the browser
+    if(player.currentTime > 0) {
+        const progressBar = document.getElementById('progress')
+        progressBar.value = (player.currentTime / player.duration) * 100
+    }
 }

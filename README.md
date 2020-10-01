@@ -1,2 +1,5 @@
 # music-player
- Basic music player project
+
+Desenvolvi um music player básico com Javascript
+
+Basic music player project
